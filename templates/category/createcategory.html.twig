@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formCategorie 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}form{% endblock %}
+
+{% block body %}
+
+
+    {%for message in app.flashes('message') %}
+        <div class="alert alert-sucess" role="alert">
+            {{ message }}
+
+        </div>
+    {% endfor%}
+    <h1> contact</h1>
+
+
+
+    {{ form_start(formCategorie) }}
+
+
+
+    {{ form_widget(formCategorie) }}
+    <button type="submit" class="btn btn-success" > Ajouter la categorie</button>
+    {{ form_end(formCategorie) }}
+
+
+{% endblock %}

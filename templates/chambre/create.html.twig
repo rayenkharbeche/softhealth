@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title%} form  {% endblock  %}
+    {% form_theme formChambre 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <div class="m-4">
+        <h2 style="color: #22aab1;">Liste des chambres</h2>
+    </div>
+
+    {{ form_start(formChambre) }}
+
+
+
+    {{ form_widget(formChambre) }}
+    <button type="submit" class="btn btn-success" > Ajouter la categorie</button>
+    {{ form_end(formChambre) }}
+
+{% endblock  %}
