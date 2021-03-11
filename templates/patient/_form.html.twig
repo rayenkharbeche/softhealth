@@ -1,0 +1,65 @@
+
+{% block body %}
+    <body>
+
+    {% block titre %}
+        <section id="appointment" class="appointment section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="titreviolet">
+                    <h2>Nouveau patient</h2>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+    <div class="container">
+        <div class="form">
+
+            {{ form_start(form,{
+                'attr': {
+                    'novalidate': 'novalidate',
+
+                }
+            }
+            ) }}
+
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">CIN</label>
+                {{ form_widget(form.cin) }}
+                {{ form_errors(form.cin) }}
+            </div>
+            <div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Nom</label>
+                    {{ form_widget(form.nom) }}
+                    {{ form_errors(form.nom) }}
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Prenom</label>
+                    {{ form_widget(form.prenom) }}
+                    {{ form_errors(form.prenom) }}
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 form-control-label">E_mail</label>
+                    {{ form_widget(form.email) }}
+                    {{ form_errors(form.email) }}
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Mot De passe </label>
+                    {{ form_widget(form.password) }}
+                    {{ form_errors(form.password) }}
+                </div>
+
+
+
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary">{{ button_label|default('Ajouter') }}</button>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}
