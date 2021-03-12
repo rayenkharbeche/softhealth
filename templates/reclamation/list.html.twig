@@ -1,0 +1,29 @@
+{% extends 'baseB.html.twig' %}
+{% block title %}Liste reclamations{% endblock %}
+{% block body %}
+    <table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Commentaire</td>
+        <td>Type</td>
+        <td>Created_at</td>
+        <td>Etat</td>
+        <td>User</td>
+        <td>Action</td>
+
+    </tr>
+    {% for rec in reclamations %}
+        <tr>
+            <td>{{ rec.id }}</td>
+            <td>{{ rec.type }}</td>
+            <td>{{ rec.createdAt|date }}</td>
+            <td>{{ rec.etat }}</td>
+            <td>{{ rec.user }}</td>
+            <td><a href="{{ path('updateReclamation',{'id':rec.id}) }}">Update</a>
+                <a href="{{ path('deleteReclamation',{'id':rec.id}) }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="{{ path('addReclamation') }}">Add Reclamation</a>
+{% endblock %}

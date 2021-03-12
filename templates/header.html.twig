@@ -1,0 +1,209 @@
+
+<body>
+
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="align-items-center d-none d-md-flex">
+            <i class="bi bi-clock"></i> Lundi - Dimanche, 8h to 22h
+        </div>
+        <div class="d-flex align-items-center">
+            <i class="bi bi-phone"></i>  Téléphone : 50234587
+        </div>
+    </div>
+</div>
+
+
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <a href="index.html" class="logo me-auto"><img src="{{ asset('assets/img/logoP.png') }}" alt=""></a>
+
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto " href="{{ path('app_home') }}">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li class="dropdown"><a href="{{ path('app_register') }}"><span>Service patient</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{{ path('app_register') }}">Inscrire</a></li>
+                        <li><a href="{{ path('addReclamation') }}">Réclamation</a></li>
+
+
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="{{ path('app_register') }}">Inscrire</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <a href="{{ path('app_login') }}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Log in</a>
+
+    </div>
+
+
+
+</header><!-- End Header -->
+
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url({{ asset('assets/img/slide/slide-1.jpg') }})">
+                <div class="container">
+                    <h2>Bienvenue à <span>SOFT HEALTH</span></h2>
+                    <p>La santé c'est le silence des organes</p>
+
+
+                </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url({{ ('assets/img/slide/slide-2.jpg') }})">
+            <div class="container">
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+    </div>
+</section>
+
+<section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                    <h4 class="title"><a href="">Les médecine de famille</a></h4>
+                    <p class="description">Vous avez un médecin de famille?</p>
+                    <p class="description">   Il est votre premier recours, et ce, pour tout type de problème de santé.</p>
+                    <p class="description">Saviez-vous que les groupes de médecine de famille (GMF)</p>
+                    <p class="description">  vous permettent d’avoir accès à des soins de santé et de services psychosociaux</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon"><i class="fas fa-pills"></i></div>
+                    <h4 class="title"><a href="">Laboratoires  d'imagerie médicale et de radiologie</a></h4>
+                    <p class="description">On a le plaisir de mettre à la disposition de nos chers </p>
+                    <p class="description">patients la toute dernière technologie sécurisée du web</p>
+                    <p class="description">  pour leur permettre de consulter en temps réel les résultats de leurs analyses </p>
+                    <p class="description">A chaque changement vous recevrez un Email de notification.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon"><i class="fas fa-thermometer"></i></div>
+                    <<h4 class="title"><a href="">Nos pharmacies </a></h4>
+                    <p class="description">Il nous a semblé incontournable que la dispensation et </p>
+                    <p class="description">   le conseil du pharmacien soient au centre de l’application,</p>
+                    <p class="description"> destinée à faciliter le quotidien de vos patients, </p>
+                    <p class="description"> mais aussi à valoriser votre rôle d’acteur de santé, </p>
+                    <p class="description">  à vous doter d’un outil efficace pour prolonger</p>
+                    <p class="description">   la relation pharmacien-patient au-delà du comptoir </p>
+                    <p class="description">  et à accomplir vos nouvelles missions </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon"><i class="fas fa-dna"></i></div>
+                    <h4 class="title"><a href="">Labot d'analyses </a></h4>
+                    <p class="description">On a le plaisir de mettre à la disposition de nos chers </p>
+                    <p class="description">patients la toute dernière technologie sécurisée du web</p>
+                    <p class="description">  pour leur permettre de consulter en temps réel les résultats de leurs analyses </p>
+                    <p class="description">A chaque changement vous recevrez un Email de notification.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Featured Services Section -->
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>À PROPOS DE NOUS</h2>
+            <p>soft health est une application simple et ergonomique qui facilite
+                les transitions dans le domaines médicale .</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+
+
+                </p><h3>Via notre application vous pouvez :</h3>
+
+                <ul>
+                    <li><i class="bi bi-check-circle"></i>prendre un rendez-vous dans nos hôpitaux sans vous déplacer .</li>
+                    <li><i class="bi bi-check-circle"></i> consulter les services offert par nos médecins et bien garantir nos services.</li>
+                    <li><i class="bi bi-check-circle"></i> renseignez-vous sur la disponibilité des lits vacants dans les hôpitaux le plus proche afin de fixer un rendez-vous à notre meilleure convenance</li>
+                    <li><i class="bi bi-check-circle"></i> en un seul et simple clic   vous pouvez sauvez la vie</li>
+                </ul>
+                <p>
+                    Tout cela est désormais possible au moyen d'une  application simple et organique.
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Us Section -->
+
+<section id="gallery" class="gallery">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Gallerie </h2>
+            <p> La galerie des services offert par nos hopitaux </p>
+            <h2>SOFT HEALTH</h2>
+            <h1>La santé c'est le silence des organes</h1>
+        </div>
+
+        <div class="gallery-slider swiper-container">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-1.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-1.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-2.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-2.jp') }}g" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-3.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-3.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-4.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-4.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-5.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-5.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-6.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-6.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-7.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-7.jpg') }}" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="gallery-lightbox" href="{{ asset('assets/img/gallery/gallery-8.jpg') }}"><img src="{{ asset('assets/img/gallery/gallery-8.jpg') }}" class="img-fluid" alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Gallery Section -->
+
+
+</body>

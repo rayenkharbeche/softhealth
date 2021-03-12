@@ -1,0 +1,7 @@
+{% extends 'baseB.html.twig' %}
+{% block title %}Modifier reclamations{% endblock %}
+{% block body %}
+{{ form(form) }}
+
+    <button type="reset" class="btn btn-default" href="{{ path('listReclamation') }}">Retourner à la liste</button>
+{% endblock %}
