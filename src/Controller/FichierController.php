@@ -59,8 +59,21 @@ class FichierController extends AbstractController
         $form = $this->createForm(FichierType::class, $fichier);
         $form->handleRequest($request);
 
+        if ($form->isSubmitted() && isset($_FILES['fichier'])) {
+
+            if (!is_dir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getId())) {
+                mkdir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getId());
+            }
+            $filename = $_FILES['fichier']['name']['image'];
+            copy($_FILES['fichier']['tmp_name']['image'], __DIR__ . '/../../public/uploads/'
+                . $fichier->getDossier()->getId() . '/' . $filename);
+
+            $fichier->setImage($filename);
+        }
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+
             $em = $this->getDoctrine()->getManager();
 
                 $em->persist($fichier);

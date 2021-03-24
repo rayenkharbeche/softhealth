@@ -21,7 +21,7 @@
             <tr>
                 <td> {{ c.id}}</td>
                 <td> {{ c.description}}</td>
-
+                <td> <a href="/uploads/{{ c.dossier.id}}/{{ c.image}}" target="_blank">{{ c.image}}</a></td>
                 <td> {{ c.dossier.id|default(0)}}</td>
 
                 <td><a href="{{ path('edit_fichier',{'id':c.id}) }}">update</a></td>

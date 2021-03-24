@@ -48,16 +48,21 @@ class DossierController extends AbstractController
      * @Route("/dossier/add", name="dossier_create")
      */
     public function CreerDossier (Request $request){
+
         $dossier=new Dossier();
         $form=$this->createForm(DossierType::class,$dossier);
+
         $form->handleRequest($request);
-         $dossier->setDateCreation(new \DateTime('now'));
+        $dossier->setDateCreation(new \DateTime('now'));
 
 
         if($form->isSubmitted() && $form->isValid()){
             $em=$this->getDoctrine()->getManager();
             $em->persist($dossier);
             $em->flush();
+            
+            mkdir(__DIR__ . '/../../public/uploads/' . $dossier->getId());
+
             return $this->redirectToRoute('dossier_show');
         }
         return $this->render('dossier/create.html.twig' , ['formDossier' =>$form->createView()]);
@@ -81,14 +86,14 @@ class DossierController extends AbstractController
         }
         return $this->render('dossier/UpdateDoc.html.twig', ['form' => $form->createView()]);}
 
-       // /**
-        // * @Route("dossier/recherche", name="recherche")
-       //  */
-       // function Recherche(DossierRepository $repository,Request $request)
-        //{
-         //   $data=$request->get('search');
-          //  $dossier=$repository->findBy(['id'=>$data]);
-          //  return $this->render('dossier/ShowDoc.html.twig', array("dossiers" => $dossier));
-       // }
+    // /**
+    // * @Route("dossier/recherche", name="recherche")
+    //  */
+    // function Recherche(DossierRepository $repository,Request $request)
+    //{
+    //   $data=$request->get('search');
+    //  $dossier=$repository->findBy(['id'=>$data]);
+    //  return $this->render('dossier/ShowDoc.html.twig', array("dossiers" => $dossier));
+    // }
 
 }

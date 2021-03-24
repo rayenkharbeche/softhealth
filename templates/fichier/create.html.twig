@@ -14,5 +14,12 @@
 
     {{ form_end(form) }}
 
+    <script>
+        document.getElementById("fichier_image").onchange = function() {
+            let file = document.getElementById("fichier_image").files[0];
+            console.log('Files', file.name)
+            document.getElementsByClassName("custom-file-label")[0].innerText = file.name;
+        }
+    </script>
 
 {% endblock %}

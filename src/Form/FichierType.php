@@ -18,20 +18,15 @@ class FichierType extends AbstractType
         $builder
             ->add('description', TextareaType::class,['attr'=>['placeholder'=>"description du fichier"]])
             ->add('image', FileType::class,[
-
-                'mapped' => false,
                 'attr'=>[
                     'class'=>"form-control-file"
                     ],
-                'multiple'=>true,
                 'required' => false
-    ])
-
-
+            ])
             ->add('dossier')
 
-           ->add('Ajouter fichier',SubmitType::class,
-           ['attr'=>['formnovalidate'=>'formnovalidate']])
+            ->add('Ajouter fichier',SubmitType::class,
+                ['attr'=>['formnovalidate'=>'formnovalidate']])
 
 
         ;

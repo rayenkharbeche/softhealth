@@ -16,12 +16,10 @@ class DossierType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('description', TextareaType::class,['attr'=>['placeholder'=>"description du dossier"]])
+            ->add('description', TextareaType::class,
+                ['attr'=>['placeholder'=>"description du dossier"]])
             ->add('Ajouter dossier ',SubmitType::class,
                 ['attr'=>['formnovalidate'=>'formnovalidate']])
-
-
-
         ;
     }
 

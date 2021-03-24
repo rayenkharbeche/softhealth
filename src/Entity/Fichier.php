@@ -28,8 +28,18 @@ class Fichier
 
 
     /**
-     * @ORM\ManyToOne(targetEntity=Dossier::class, inversedBy="fichiers" )
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="champ obligatoire")
+     * @Assert\File(
+     *     maxSize = "20M",
+     *     mimeTypes = {"image/jpg", "image/jpeg", "image/bmp"},
+     *     mimeTypesMessage = "Please upload a valid File"
+     * )
+     */
+    private $image;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Dossier::class, inversedBy="fichiers" )
      */
     private $dossier;
 
@@ -63,7 +73,20 @@ class Fichier
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
 
-
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image): void
+    {
+        $this->image = $image;
+    }
 
 }
