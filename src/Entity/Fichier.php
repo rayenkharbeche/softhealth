@@ -32,11 +32,11 @@ class Fichier
      * @Assert\NotBlank(message="champ obligatoire")
      * @Assert\File(
      *     maxSize = "20M",
-     *     mimeTypes = {"image/jpg", "image/jpeg", "image/bmp"},
+     *     mimeTypes = {"image/jpg", "image/png","image/pdf","application/pdf"},
      *     mimeTypesMessage = "Please upload a valid File"
      * )
      */
-    private $image;
+    private $file;
 
     /**
      * @ORM\ManyToOne(targetEntity=Dossier::class, inversedBy="fichiers" )
@@ -76,17 +76,17 @@ class Fichier
     /**
      * @return mixed
      */
-    public function getImage()
+    public function getFile()
     {
-        return $this->image;
+        return $this->file;
     }
 
     /**
-     * @param mixed $image
+     * @param mixed $file
      */
-    public function setImage($image): void
+    public function setFile($image): void
     {
-        $this->image = $image;
+        $this->file = $image;
     }
 
 }

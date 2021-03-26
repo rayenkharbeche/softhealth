@@ -56,12 +56,15 @@ class DossierController extends AbstractController
         $dossier->setDateCreation(new \DateTime('now'));
 
 
-        if($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted()
+            //&& $form->isValid()
+        )
+        {
             $em=$this->getDoctrine()->getManager();
             $em->persist($dossier);
             $em->flush();
             
-            mkdir(__DIR__ . '/../../public/uploads/' . $dossier->getId());
+            mkdir(__DIR__ . '/../../public/uploads/' . $dossier->getDescription());
 
             return $this->redirectToRoute('dossier_show');
         }

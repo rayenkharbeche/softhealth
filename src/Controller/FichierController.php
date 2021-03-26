@@ -61,14 +61,14 @@ class FichierController extends AbstractController
 
         if ($form->isSubmitted() && isset($_FILES['fichier'])) {
 
-            if (!is_dir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getId())) {
-                mkdir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getId());
+            if (!is_dir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getDescription())) {
+                mkdir(__DIR__ . '/../../public/uploads/' . $fichier->getDossier()->getDescription());
             }
-            $filename = $_FILES['fichier']['name']['image'];
-            copy($_FILES['fichier']['tmp_name']['image'], __DIR__ . '/../../public/uploads/'
-                . $fichier->getDossier()->getId() . '/' . $filename);
+            $filename = $_FILES['fichier']['name']['file'];
+            copy($_FILES['fichier']['tmp_name']['file'], __DIR__ . '/../../public/uploads/'
+                . $fichier->getDossier()->getDescription() . '/' . $filename);
 
-            $fichier->setImage($filename);
+            $fichier->setFile($filename);
         }
 
         if ($form->isSubmitted() && $form->isValid()) {

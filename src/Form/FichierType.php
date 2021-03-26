@@ -17,7 +17,7 @@ class FichierType extends AbstractType
     {
         $builder
             ->add('description', TextareaType::class,['attr'=>['placeholder'=>"description du fichier"]])
-            ->add('image', FileType::class,[
+            ->add('file', FileType::class,[
                 'attr'=>[
                     'class'=>"form-control-file"
                     ],
