@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="128af0b5-a4c6-42d9-8b3e-0e742de0bdfe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pidev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pidev.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/fontastic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ChambreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ChambreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReclamationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Chambre.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Chambre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RechercheType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RechercheType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ChambreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ChambreRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/createcategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/createcategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/formCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/formCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chambre/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chambre/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chambre/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chambre/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/chambre/listChambreOrderBy.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chambre/listChambreOrderBy.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chambre/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chambre/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/emails/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/contact.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +159,7 @@
       <workItem from="1616580986181" duration="85000" />
       <workItem from="1616845099265" duration="167000" />
       <workItem from="1616845462388" duration="926000" />
-      <workItem from="1617037105735" duration="13245000" />
+      <workItem from="1617037105735" duration="13556000" />
     </task>
     <servers />
   </component>
