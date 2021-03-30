@@ -3,7 +3,7 @@
 {% block title %}Rendez Vous {% endblock %}
 
 {% block body %}
-    <body>
+<body xmlns="http://www.w3.org/1999/html">
 
     <div class="page">
         <!-- Main Navbar-->
@@ -77,9 +77,15 @@
                     <li><a href="{{ path('main') }}"> <i class="icon-home"></i>Home </a></li>
                     <li><a href="{{ path('user_index') }}"> <i class="icon-grid"></i>Personnel </a></li>
                     <li><a href="tables.html"> <i class="icon-grid"></i>Patient </a></li>
-                    <li class="active"><a href="{{ path('rendez_vous_index') }}"> <i class="icon-grid"></i>Rendez vous </a></li>
-                    <li><a href="{{ path('rendez_vous_c') }}"> <i class="fa fa-bar-chart"></i>Calendar Rendez_Vous</a></li>
-                    <li><a href="{{ path('rendez_vous_new') }}"> <i class="fa fa-bar-chart"></i>Ajouter Rendez_Vous</a></li>
+                    <li class="active"><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Rendez vous </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li class="active"><a href="{{ path('rendez_vous_index') }}"> <i class="icon-grid"></i>Rendez vous </a></li>
+                            <li><a href="{{ path('rendez_vous_c') }}"> <i class="fa fa-bar-chart"></i>Calendar Rendez_Vous</a></li>
+                            <li><a href="{{ path('rendez_vous_new') }}"> <i class="fa fa-bar-chart"></i>Ajouter Rendez_Vous</a></li>
+                            <li><a href="{{ path('rendez_vous_Tree') }}"> <i class="fa fa-bar-chart"></i>tree Rendez_Vous</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="{{ path('planning_admin') }}"> <i class="fa fa-bar-chart"></i>Planning </a></li>
                     <li><a href="{{ path('patient_index') }}"> <i class="fa fa-bar-chart"></i>Patient </a></li>
                     <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
@@ -90,14 +96,14 @@
                 <!-- Page Header-->
                 <header class="page-header">
                     <div class="container-fluid">
-                        <h2 class="no-margin-bottom">Personnels</h2>
+                        <h2 class="no-margin-bottom">Rendez Vous</h2>
                     </div>
                 </header>
                 <!-- Breadcrumb-->
                 <div class="breadcrumb-holder container-fluid">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ path('main') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Personnels</li>
+                        <li class="breadcrumb-item active">Rendez Vous</li>
                     </ul>
                 </div>
                 <section class="tables">
@@ -118,25 +124,35 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table class="table">
+                                            <input type="text" id="search" class="form-control" placeholder="Search">
+                                            <table class="table" id="t" >
                                                 <thead>
                                                 <tr>
                                                     <th>Id</th>
                                                     <th>NomRDV</th>
                                                     <th>Description</th>
                                                     <th>DateRDV</th>
+                                                    <th>User</th>
                                                     <th>Planning</th>
                                                     <th>actions</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="all">
                                                 {% for rendez_vou in rendez_vouses %}
                                                     <tr>
                                                         <td>{{ rendez_vou.id }}</td>
                                                         <td>{{ rendez_vou.nomRDV }}</td>
                                                         <td>{{ rendez_vou.description }}</td>
-                                                        <td>{{ rendez_vou.dateRDV ? rendez_vou.dateRDV|date('Y-m-d') : '' }}</td>
-                                                        <td>{{ rendez_vou.plannings }}</td>
+                                                        <td>{{ rendez_vou.dateRDV ? rendez_vou.dateRDV|date('Y-m-d H:i:s') : '' }}</td>
+                                                        <td>
+                                                                {{ rendez_vou.user }}
+                                                        </td>
+                                                        <td>
+                                                                {{ rendez_vou.plannings }}
+                                                        </td>
+                                                        <td>
+                                                            {{ rendez_vou.patient }}
+                                                        </td>
                                                         <td>
                                                             <a href="{{ path('rendez_vous_show', {'id': rendez_vou.id}) }}">show</a>
                                                             <a href="{{ path('rendez_vous_edit', {'id': rendez_vou.id}) }}">edit</a>
@@ -149,9 +165,10 @@
                                                     </tr>
                                                 {% endfor %}
                                                 </tbody>
+                                                <tbody id="search">
+                                                </tbody>
                                             </table>
 
-                                            <a href="{{ path('rendez_vous_new') }}">Create new</a>
                                         </div>
                                     </div>
                                 </div>
@@ -179,4 +196,48 @@
         </div>
     </div>
     </body>
+
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+</script>
+
+<script>
+    $( document ).ready(function() {
+        $("#search").keyup(function(e){
+            var value = $(this).val();
+            $.ajax({
+                url : "{{ path('rendez_vous_index') }}",
+                type : 'GET',
+                data: {
+                    'searchValue' : value
+                },
+                success : function(retour){
+                    if(retour){
+                        $('#t tbody#search').empty();
+                        $.each(JSON.parse(retour), function(i, obj) {
+                            $('#t tbody#all').hide();
+                            $('#t tbody#search').append('<tr><td> '+obj.id+' </td><td> '+obj.nomRDV+' </td><td>'+obj.dateRDV+' </td><td>'+obj.description+' </td><td>'+obj.patient+' </td><td>'+obj.user+' </td><td>'+obj.plannings+' </td><td><ahref="rendez/vous/'+obj.id+'/edit">modifier</a> </br><ahref="rendez/vous/'+obj.id+'">supprimer</a></td></tr>');
+                        });
+
+                    }
+                    else
+                    {
+
+                        $('#t tbody#all').show();
+                        $('#t tbody#search').empty();
+                        $('#t tbody#search').fadeIn('fast');
+
+                    }
+
+
+                },
+            });
+            return false;
+        });
+    });
+
+
+
+</script>
 {% endblock %}

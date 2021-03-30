@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Planning;
 use App\Entity\RendezVous;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -47,7 +48,30 @@ class RendezVousRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function recherche($nomRDV)
+
+    /**
+     * Requete QueryBuilder
+     */
+
+    public function Recherche($dateRDV)
+    {
+        return $this->createQueryBuilder('s')
+            ->where('s.dateRDV LIKE :dateRDV')
+            ->setParameter('dateRDV', '%'.$dateRDV.'%')
+            ->getQuery()
+            ->execute()
+            ;
+    }
+
+    public function ListRendezVousOrderByDATE()
+    {
+        return $this->createQueryBuilder('x')
+            ->orderBy('x.dateRDV','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function RechercheName($nomRDV)
     {
         return $this->createQueryBuilder('s')
             ->where('s.nomRDV LIKE :nomRDV')
@@ -55,5 +79,38 @@ class RendezVousRepository extends ServiceEntityRepository
             ->getQuery()
             ->execute()
             ;
+    }
+
+    public function FindByUSER($id){
+        return $this->createQueryBuilder('s')
+            ->join('s.user', 'u')
+            ->join('u.plannings', 'p')
+            ->addSelect('u')
+            ->where('u.id=:id AND p.personnel=:id')
+            ->setParameter('id',$id)
+            ->addSelect('p')
+            ->getQuery()
+            ->getResult();
+
+    }
+
+    /**
+     * @param $id
+     * @return array
+     */
+    public function findPlannigsByUser($id): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Planning p
+           INNER JOIN App\Entity\User u WITH p.personnel = u.id
+           INNER JOIN App\Entity\RendezVous r WITH u.id = r.user
+            WHERE u.id = :id'
+        )->setParameter( 'id', $id );
+
+//      returns an array of Produit objects
+        return $query->getResult();
     }
 }

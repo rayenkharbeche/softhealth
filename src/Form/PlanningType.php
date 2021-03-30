@@ -37,7 +37,7 @@ class PlanningType extends AbstractType
                     'class'=>'name'
                 ]
             ])
-            ->add('renders')
+
             ->add('personnel')
 
         ;

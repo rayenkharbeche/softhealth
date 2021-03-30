@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Planning;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,9 +21,9 @@ class ApiController extends AbstractController
         ]);
     }
     /**
-     * @Route("/api/{id}/edit", name="api_event_edit", methods={"POST"})
+     * @Route("/api/{id}/edit", name="api_event_edit", methods={"PUT"})
      */
-  public function majEvent(?calendar $calendar,Request $request): Response
+  public function majEvent(?Planning $calendar,Request $request): Response
     {
         // On récupére les données
         $donnees = json_decode($request->getContent());
@@ -38,13 +39,13 @@ class ApiController extends AbstractController
             // on initialise un code
             $code =200;
             // on verifie si l'id existe
-            if (!calendar){
+      /*      if (!Planning){
                 //on instancier un redezVous
-                $calendar = new calendar;
+                $calendar = new Planning;
 
                 // On change le code
                 $code =201;
-            }
+            }*/
             //On hydrate l'objet avec les donnees
             $calendar->setNomP()($donnees->title);
             $calendar->setDescriptionP()($donnees->description);

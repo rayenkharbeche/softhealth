@@ -29,14 +29,16 @@ class User
      * @ORM\OneToMany(targetEntity=Planning::class, mappedBy="personnel")
      */
     private $plannings;
+
     /**
-     * @ORM\ManyToOne(targetEntity=RendezVous::class, inversedBy="user")
+     * @ORM\OneToMany(targetEntity=RendezVous::class, mappedBy="user")
      */
-    private $rendezVous;
+    private $rendezVouses;
 
     public function __construct()
     {
         $this->plannings = new ArrayCollection();
+        $this->rendezVouses = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -85,19 +87,39 @@ class User
 
         return $this;
     }
-    public function getRendezVous(): ?RendezVous
-    {
-        return $this->rendezVous;
+
+    public function __toString(){
+        return (string)$this->getNomUser();
     }
 
-    public function setRendezVous(?RendezVous $rendezVous): self
+    /**
+     * @return Collection|RendezVous[]
+     */
+    public function getRendezVouses(): Collection
     {
-        $this->rendezVous = $rendezVous;
+        return $this->rendezVouses;
+    }
+
+    public function addRendezVouse(RendezVous $rendezVouse): self
+    {
+        if (!$this->rendezVouses->contains($rendezVouse)) {
+            $this->rendezVouses[] = $rendezVouse;
+            $rendezVouse->setUser($this);
+        }
 
         return $this;
     }
-    public function __toString(){
-        return (string)$this->getNomUser();
+
+    public function removeRendezVouse(RendezVous $rendezVouse): self
+    {
+        if ($this->rendezVouses->removeElement($rendezVouse)) {
+            // set the owning side to null (unless already changed)
+            if ($rendezVouse->getUser() === $this) {
+                $rendezVouse->setUser(null);
+            }
+        }
+
+        return $this;
     }
 
 }

@@ -76,20 +76,18 @@
                 <ul class="list-unstyled">
                     <li><a href="{{ path('main') }}"> <i class="icon-home"></i>Home </a></li>
                     <li><a href="{{ path('user_index') }}"> <i class="icon-grid"></i>Personnel </a></li>
-                    <li class="active"><a href="{{ path('planning_admin') }}"> <i class="icon-grid"></i>Planning Admin </a></li>
-                    <li ><a href="{{ path('planning_index') }}"> <i class="fa fa-bar-chart"></i>Planning </a></li>
+                    <li class="active"><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Planning </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a href="{{ path('planning_admin') }}"> <i class="fa fa-bar-chart"></i>Planning Admin </a></li>
+                            <li><a href="{{ path('planning_index') }}"> <i class="fa fa-bar-chart"></i>Planning Calendar</a></li>
+                            <li><a href="{{ path('planning_new') }}"> <i class="fa fa-bar-chart"></i>Ajout Planning</a></li>
+                            <li class="active"><a href="#"> <i class="fa fa-bar-chart"></i>Edit Planning</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{ path('rendez_vous_index') }}"> <i class="fa fa-bar-chart"></i>Rendez_Vous</a></li>
                     <li><a href="{{ path('user_index') }}"> <i class="icon-grid"></i>User</a></li>
                     <li><a href="{{ path('patient_index') }}"> <i class="icon-grid"></i>Patient </a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
-                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Medecin</a></li>
-                            <li><a href="#">Infermiere</a></li>
-                            <li><a href="#">Pharmacien</a></li>
-                            <li><a href="#">Secraitère</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+
 
                 </ul>
             </nav>

@@ -33,6 +33,8 @@ class RendezVousType extends AbstractType
             ->add('dateRDV' , DateTimeType::class, [
                 'date_widget' => 'single_text'
             ])
+            ->add('user')
+            ->add('patient')
             ->add('plannings')
         ;
     }

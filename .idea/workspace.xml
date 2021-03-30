@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eafd8da9-79cc-4f73-9099-65b67fa764cd" name="Default Changelist" comment="" />
+    <list default="true" id="eafd8da9-79cc-4f73-9099-65b67fa764cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/back/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rendez_vous/allRDV.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210310225857.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210311164930.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlanningController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlanningController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RendezVousController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RendezVousController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Patient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Planning.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Planning.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RendezVous.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RendezVous.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PlanningType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PlanningType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RendezVousType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RendezVousType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PlanningRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PlanningRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RendezVousRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RendezVousRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baseB.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseB.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baseNP.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseNP.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/indexC.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/indexC.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planning/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planning/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/indexC.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/indexC.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendez_vous/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendez_vous/show.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +47,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +162,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/projectEmna" />
@@ -130,6 +171,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\GestionPlannigRV\public\back\js" />
       <recent name="C:\wamp64\www\GestionPlannigRV\public\calender" />
       <recent name="C:\wamp64\www\GestionPlannigRV\public\assets" />
     </key>
@@ -151,48 +193,29 @@
       <workItem from="1615295884036" duration="15959000" />
       <workItem from="1615364749294" duration="31614000" />
       <workItem from="1615464382731" duration="22547000" />
-      <workItem from="1615540240185" duration="2374000" />
+      <workItem from="1615540240185" duration="12897000" />
+      <workItem from="1615886095187" duration="12370000" />
+      <workItem from="1615900300372" duration="3349000" />
+      <workItem from="1616077491324" duration="16278000" />
+      <workItem from="1616144768374" duration="3256000" />
+      <workItem from="1616148481567" duration="7661000" />
+      <workItem from="1616170307798" duration="624000" />
+      <workItem from="1616171213848" duration="597000" />
+      <workItem from="1616188199815" duration="3255000" />
+      <workItem from="1616259923831" duration="12434000" />
+      <workItem from="1616285589507" duration="67000" />
+      <workItem from="1616344920646" duration="332000" />
+      <workItem from="1616345851515" duration="4640000" />
+      <workItem from="1616424200888" duration="10906000" />
+      <workItem from="1616597866192" duration="9403000" />
+      <workItem from="1616779866224" duration="6009000" />
+      <workItem from="1616857825524" duration="4692000" />
+      <workItem from="1617030906066" duration="19599000" />
+      <workItem from="1617099730141" duration="1136000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="411" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615388893929">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="411" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1615388893929" />
-    <state x="435" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1615469698130">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="435" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1615469698130" />
-    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615474637986">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1615474637986" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1615546589373">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615546589373" />
-    <state x="297" y="151" key="run.anything.popup" timestamp="1615412776786">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1615412776786" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1615476295385">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1615476295385" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Form/RendezVousType.php</url>
-          <line>2</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

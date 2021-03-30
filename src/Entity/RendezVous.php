@@ -41,27 +41,28 @@ class RendezVous
 
 
     /**
-     * @ORM\OneToMany(targetEntity=Patient::class, mappedBy="rendezVous",cascade={"persist"})
-     * @Assert\NotBlank(message="Champs Obligatoire")
+     * @ORM\ManyToOne(targetEntity=Patient::class, inversedBy="rendezVous")
      */
     private $patient;
 
-    /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="rendezVous",cascade={"persist"})
-     * @Assert\NotBlank(message="Champs Obligatoire")
-     */
-    private $user;
+
 
     /**
-     * @ORM\ManyToOne(targetEntity=Planning::class, inversedBy="renders",cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity=Planning::class, inversedBy="renders")
      * @ORM\JoinColumn(nullable = true)
      */
     private $plannings;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="rendezVouses")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
     public function __construct()
     {
-        $this->patient = new ArrayCollection();
-        $this->user = new ArrayCollection();
+
+
         $this->plannings = new ArrayCollection();
 
     }
@@ -107,65 +108,8 @@ class RendezVous
         return $this;
     }
 
-    /**
-     * @return Collection|Patient[]
-     */
-    public function getPatient(): Collection
-    {
-        return $this->patient;
-    }
 
-    public function addPatient(Patient $patient): self
-    {
-        if (!$this->patient->contains($patient)) {
-            $this->patient[] = $patient;
-            $patient->setRendezVous($this);
-        }
 
-        return $this;
-    }
-
-    public function removePatient(Patient $patient): self
-    {
-        if ($this->patient->removeElement($patient)) {
-            // set the owning side to null (unless already changed)
-            if ($patient->getRendezVous() === $this) {
-                $patient->setRendezVous(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|User[]
-     */
-    public function getUser(): Collection
-    {
-        return $this->user;
-    }
-
-    public function addUser(User $user): self
-    {
-        if (!$this->user->contains($user)) {
-            $this->user[] = $user;
-            $user->setRendezVous($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUser(User $user): self
-    {
-        if ($this->medecin->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getRendezVous() === $this) {
-                $user->setRendezVous(null);
-            }
-        }
-
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -183,9 +127,37 @@ class RendezVous
         $this->plannings = $plannings;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPatient()
+    {
+        return $this->patient;
+    }
+
+    /**
+     * @param mixed $patient
+     */
+    public function setPatient($patient): void
+    {
+        $this->patient = $patient;
+    }
+
 
 
     public function __toString(){
         return (string)$this->getNomRDV();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

@@ -48,13 +48,20 @@ class Planning
 
     /**
      * @ORM\OneToMany(targetEntity=RendezVous::class, mappedBy="plannings",cascade={"persist"})
+     * @ORM\JoinTable(
+     *     joinColumns={@ORM\JoinColumn(onDelete="CASCADE")},
+     *     inverseJoinColumns={@ORM\JoinColumn(onDelete="CASCADE")}
+     *     )
      */
     private $renders;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="plannings",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
      */
     private $personnel;
+
+
 
     public function __construct(){
         $this->renders = new ArrayCollection();

@@ -47,4 +47,27 @@ class PlanningRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function FindByID($id)
+    {
+
+        return $this->createQueryBuilder('s')
+            ->where('s.id=:id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->execute()
+            ;
+    }
+    public function FindRendersByID($id)
+    {
+        return $this->createQueryBuilder('s')
+            ->join('s.renders', 'u')
+            ->addSelect('u')
+            ->where('s.id=:id AND u.plannings=:id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->execute()
+            ;
+    }
+
 }

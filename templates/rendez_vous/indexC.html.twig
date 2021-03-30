@@ -89,18 +89,15 @@
                     <li><a href="{{ path('user_index') }}"> <i class="icon-grid"></i>Personnel </a></li>
                     <li><a href="{{ path('planning_admin') }}"> <i class="fa fa-bar-chart"></i>Planning Admin </a></li>
                     <li><a href="{{ path('planning_index') }}"> <i class="fa fa-bar-chart"></i>Planning </a></li>
-                    <li><a href="{{ path('rendez_vous_index') }}"> <i class="fa fa-bar-chart"></i>Rendez_Vous Admin</a></li>
-                    <li class="active"><a href="{{ path('rendez_vous_c') }}"> <i class="fa fa-bar-chart"></i>Calendar Rendez_Vous</a></li>
-                    <li><a href="{{ path('patient_index') }}"> <i class="icon-grid"></i>Patient </a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
+                    <li class="active"><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Rendez vous </a>
                         <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Medecin</a></li>
-                            <li><a href="#">Infermiere</a></li>
-                            <li><a href="#">Pharmacien</a></li>
-                            <li><a href="#">Secraitère</a></li>
+                            <li><a href="{{ path('rendez_vous_index') }}"> <i class="icon-grid"></i>Rendez vous </a></li>
+                            <li class="active"><a href="{{ path('rendez_vous_c') }}"> <i class="fa fa-bar-chart"></i>Calendar Rendez_Vous</a></li>
+                            <li><a href="{{ path('rendez_vous_new') }}"> <i class="fa fa-bar-chart"></i>Ajouter Rendez_Vous</a></li>
+                            <li><a href="{{ path('rendez_vous_Tree') }}"> <i class="fa fa-bar-chart"></i>tree Rendez_Vous</a></li>
                         </ul>
                     </li>
-                    <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+                    <li><a href="{{ path('patient_index') }}"> <i class="icon-grid"></i>Patient </a></li>
 
                 </ul>
             </nav>
@@ -157,28 +154,35 @@
             let calendarElt =document.querySelector("#calendrier")
 
             let calendar = new FullCalendar.Calendar(calendarElt, {
-                initialView: 'timeGridWeek',
+                initialView: 'dayGridMonth',
                 locale : 'fr',
                 timeZone : 'Europe/Paris',
                 headerToolbar: {
                     start: 'prev, next today',
                     center: 'title',
-                    end: 'dayGridMonth,timeGridWeek'
+                    end: 'dayGridMonth,timeGridWeek,list'
+                },
+                businessHours: {
+                    start: '09:00',
+                    end: '18:30',
+                    dow: [1, 2, 3, 4, 5]
                 },
                 events: {{ data|raw }},
                 editable: true,
+                nowIndicator: true,
                 eventResizableFromStart: true
 
             })
 
+
             calendar.on('eventChange',(e)=> {
-                let url = `/rendez/vous/${e.event.id}/editR`
+                let url = `/rendez/vous/${e.event.id}/edit`
                 let donnees ={
                     "nomRDV": e.event.nomRDV,
                     "description": e.event.extendedProps.description,
                     "dateRDV": e.event.dateRDV,
                     "plannings": e.event.plannings,
-                    "user": e.event.user,
+                    "user": e.event.renders,
                     "patient": e.event.patient
                 }
                 let xhr = new XMLHttpRequest

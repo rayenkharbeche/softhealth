@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PatientRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,9 +25,16 @@ class Patient
     private $nomPatient;
 
     /**
-     * @ORM\ManyToOne(targetEntity=RendezVous::class, inversedBy="patient")
+     * @ORM\OneToMany(targetEntity=RendezVous::class, mappedBy="patient",cascade={"persist"})
      */
     private $rendezVous;
+    public function __construct()
+    {
+        $this->rendezVous = new ArrayCollection();
+
+
+
+    }
 
     public function getId(): ?int
     {
@@ -44,17 +53,38 @@ class Patient
         return $this;
     }
 
-    public function getRendezVous(): ?RendezVous
+
+    /**
+     * @return Collection|RendezVous[]
+     */
+    public function getRendezVous(): Collection
     {
         return $this->rendezVous;
     }
 
-    public function setRendezVous(?RendezVous $rendezVous): self
+    public function addRendezVous(RendezVous $rendezVous): self
     {
-        $this->rendezVous = $rendezVous;
+        if (!$this->rendezVous->contains($rendezVous)) {
+            $this->rendezVous[] = $rendezVous;
+            $rendezVous->setPatient($this);
+        }
 
         return $this;
     }
+
+    public function removeRendezVous(RendezVous $rendezVous): self
+    {
+        if ($this->rendezVous->removeElement($rendezVous)) {
+            // set the owning side to null (unless already changed)
+            if ($rendezVous->getPatient() === $this) {
+                $rendezVous->setPatient(null);
+            }
+        }
+
+        return $this;
+    }
+
+
     public function __toString(){
         return (string)$this->getNomPatient();
     }

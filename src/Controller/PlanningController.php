@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Planning;
 use App\Form\PlanningType;
 use App\Repository\PlanningRepository;
+use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,14 +25,15 @@ class PlanningController extends AbstractController
         $events = $calendar->findAll();
         $rdvs =[];
         foreach ($events as $event){
+            $event2= $calendar->FindRendersByID($event->getId());
             $rdvs[]= [
                 'id' => $event->getId(),
                 'start' => $event->getDateDebut()->format('Y-m-d H:i:s'),
                 'end' => $event->getDateFin()->format('Y-m-d H:i:s'),
                 'title' => $event->getNomP(),
                 'description' => $event->getDescriptionP(),
-                'renders' => $event->getRenders(),
-                'personnel' => $event->getPersonnel()
+                'backgroundColor' => $event2,
+                'textColor' => $event->getPersonnel()
             ];
         }
         $data = json_encode($rdvs);
@@ -42,8 +44,15 @@ class PlanningController extends AbstractController
      */
     public function indexAdmin(PlanningRepository $planningRepository): Response
     {
+        $planning =$planningRepository->findAll();
+        $event2=[];
+        foreach ($planning as $event){
+            $event2[]= $planningRepository->FindRendersByID($event->getId());
+        }
+
         return $this->render('planning/indexC.html.twig', [
             'plannings' => $planningRepository->findAll(),
+            'event' => $event2,
         ]);
     }
 
@@ -52,6 +61,7 @@ class PlanningController extends AbstractController
      */
     public function new(Request $request): Response
     {
+      //  $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $planning = new Planning();
         $form = $this->createForm(PlanningType::class, $planning);
         $form->handleRequest($request);
@@ -81,10 +91,11 @@ class PlanningController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="planning_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="planning_edit", methods={"GET","POST","PUT"})
      */
     public function edit(Request $request, Planning $planning): Response
     {
+        //  $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $form = $this->createForm(PlanningType::class, $planning);
         $form->handleRequest($request);
 
@@ -105,6 +116,7 @@ class PlanningController extends AbstractController
      */
     public function delete(Request $request, Planning $planning): Response
     {
+        //  $this->denyAccessUnlessGranted('ROLE_ADMIN');
         if ($this->isCsrfTokenValid('delete'.$planning->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($planning);
@@ -113,4 +125,5 @@ class PlanningController extends AbstractController
 
         return $this->redirectToRoute('planning_admin');
     }
+    
 }
