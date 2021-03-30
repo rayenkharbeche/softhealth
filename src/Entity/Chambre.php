@@ -69,12 +69,12 @@ class Chambre
         return $this;
     }
 
-    public function getNbrplace(): ?string
+    public function getNbrplace(): ?int
     {
         return $this->nbrplace;
     }
 
-    public function setNbrplace(string $nbrplace): self
+    public function setNbrplace(int $nbrplace): self
     {
         $this->nbrplace = $nbrplace;
 
@@ -106,6 +106,11 @@ class Chambre
     public function getCategory(): ?Category
     {
         return $this->category;
+    }
+
+    public function getCat(): ?string
+    {
+        return (string) $this->category;
     }
 
     public function setCategory(?Category $category): self

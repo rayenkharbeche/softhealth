@@ -5,6 +5,6 @@ swiftmailer:
     host: smtp.gmail.com
     port: 465
     auth_mode: login
-    username: riadhma23@gmail.com
-    password: riadhmazgou20657603
+    username: amina.kechida@esprit.tn
+    password: 181JFT3007
     encryption: ssl

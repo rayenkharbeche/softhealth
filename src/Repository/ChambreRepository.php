@@ -21,13 +21,52 @@ class ChambreRepository extends ServiceEntityRepository
     /**
      * Requete QueryBuilder
      */
-    public function trie(){
-        return $this->createQueryBuilder('s')->orderBy('s.num','ASC')->getQuery()
+    public function listChambreorderbyNum(){
+        return $this->createQueryBuilder('c')->orderBy('c.num','DESC')->getQuery()
+            ->getResult();
+    }
+    public function listChambreorderbyNbrplace(){
+        return $this->createQueryBuilder('c')->orderBy('c.num','ASC')->getQuery()
+            ->getResult();
+    }
+    public function listChambreorderbyEtage(){
+        return $this->createQueryBuilder('c')->orderBy('c.num','DESC')->getQuery()
             ->getResult();
     }
     public function recherche($num){
-        return $this->createQueryBuilder('s')->where('s.num LIKE :num')->setParameter('num',"%".$num."%")
+        return $this->createQueryBuilder('c')->where('c.num LIKE :num')->setParameter('num',"%".$num."%")
             ->getQuery() ->execute();}
+
+
+
+    public function findChambrebyCategorie(): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT c.nom as nomCategorie, COUNT(*) as sumChambre 
+            from chambre ch, category c 
+            WHERE ch.category_id = c.id 
+            group by category_id'
+        );
+
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    public function countid($value): ?int
+    {
+        return $this->createQueryBuilder('t')
+            ->select('count(t.num)')
+            ->andWhere('t.category = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+
+
+
 
 
 
@@ -60,5 +99,7 @@ class ChambreRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
 
 }

@@ -28,7 +28,8 @@ class ReclamationController extends AbstractController
             $message=(new \Swift_Message('Nouveau Contact'))
                 ->setFrom($contact['email'])
 
-                ->setTo('riadhma23@gmail.com')
+                ->setTo('asma.matmati@esprit.tn')
+                ->setTo('recipient@example.com')
 
                 ->setBody(
                     $this->renderView(

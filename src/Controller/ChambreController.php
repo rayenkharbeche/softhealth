@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Category;
 use App\Entity\Chambre;
 use App\Form\ChambreType;
+use App\Form\RechercheChambreType;
 use App\Form\RechercheType;
+use App\Repository\CategoryRepository;
+use Ob\HighchartsBundle\Highcharts\Highchart;
 
 use App\Repository\ChambreRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,12 +25,41 @@ class ChambreController extends AbstractController
      * @Route("/chambre", name="chambre")
      */
 
-    public function index(): \Symfony\Component\HttpFoundation\Response
-    {
+    public function index(){
+
+
+
+
+        $med=$this->getDoctrine()->getRepository(Chambre::class)->findAll();
+        //instance bundle chart
+        $ob1 = new Highchart();
+        //ne5tarou el type mta3 el chart piechart hoya type doura
+        $ob1->chart->renderTo('piechart');
+        $ob1->title->text('chambre par categorie');
+        $ob1->plotOptions->pie(array(
+            'allowPointSelect'  => true,
+            'cursor'    => 'pointer',
+
+            'dataLabels'    => array('enabled' => false),
+            'showInLegend'  => true
+        ));
+        $data = null;
+        foreach($med as $value)
+        {
+            $data[] = array(
+                '' .$value->getnom(), (int)$value->getstock(),
+            );
+        }
+
+        $ob1->series(array(array('type' => 'pie', 'name' => 'Stock', 'data' => $data)));
+
         return $this->render('chambre/index.html.twig', [
-            'controller_name' => 'ChambreController',
+            'controller_name' => 'MediController','piechart'=>$ob1
         ]);
     }
+
+
+
 
 
 
@@ -58,7 +91,7 @@ class ChambreController extends AbstractController
         public function listchambre()
     {
         $chambres=$this->getDoctrine()->getRepository(chambre::class)->findAll();
-        return $this->render("chambre/show.html.twig",array("chambres"=>$chambres));
+        return $this->render("chambre/showchambre.html.twig",array("chambres"=>$chambres));
 
     }
 
@@ -100,19 +133,75 @@ class ChambreController extends AbstractController
     /**
      * @Route("/trie",name="listChambreOrderBy")
      */
-    public function trie(Request $request){
+    public function listChambreorderby(Request $request){
 
-        $chambre=$this->getDoctrine()->getRepository(Chambre::class)->trie();
-        $form=$this->createForm(RechercheType::class);
+        $chambres=$this->getDoctrine()->getRepository(Chambre::class)->listChambreorderbyNum();
+        $room=$this->getDoctrine()->getRepository(Chambre::class)->listChambreorderbyNbrplace();
+        $chambre=$this->getDoctrine()->getRepository(Chambre::class)->listChambreorderbyEtage();
+
+$form=$this->createForm(RechercheChambreType::class);
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if($form->isSubmitted() ){
             $num=$form->getData()->getNum();
-            $chambreResult=$this->getDoctrine()->getRepository(Chambre::class)->recherche($num);
-            return $this->render('chambre/listChambreOrderBy.html.twig',array('chambre'=>$chambreResult,
-                'formChambre'=>$form->createView()));
+            $category=$form->getData()->getCategory();
+            $chambresR=$this->getDoctrine()->getRepository(Chambre::class)-> recherche($num);
+
+
+            return $this->render('chambre/listChambreOrderBy.html.twig',array('chambres'=> $chambresR,'form'=>$form->createView()));
+
         }
-        return $this->render('chambre/show.html.twig',array('chambre'=>$chambre,
-            'formChambre'=>$form->createView()));
+        return $this->render('chambre/listChambreOrderBy.html.twig',array('chambres'=>$chambres,'chambres'=>$room,'chambres'=>$chambre,'form'=>$form->createView()));
+
     }
+    /**
+     * @Route("/triec",name="list")
+     */
+
+    public function countChambrePerCategory(){
+        $chambres = $this->getDoctrine()
+            ->getRepository(Chambre::class)
+            ->findChambrebyCategorie();
+        return $this->render('chambre/listChambreOrderBy.html.twig',array('chambres'=> $chambres));
+
+
+    }
+    /**
+     * @Route("/home", name="home")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function affichecategoriee(ChambreRepository $rep,CategoryRepository $rep1){
+        $med=$this->getDoctrine()->getRepository(Chambre::class)->findAll();
+        $med1=$this->getDoctrine()->getRepository(Category::class)->findAll();
+        //$nombre=$this->getDoctrine()->getRepository(Chambre::class)->countid();
+        //instance bundle chart
+        $ob1 = new Highchart();
+        //ne5tarou el type mta3 el chart piechart hoya type doura
+        $ob1->chart->renderTo('piechart');
+        $ob1->title->text('statistique chambre par categorie');
+        $ob1->plotOptions->pie(array(
+            'allowPointSelect'  => true,
+            'cursor'    => 'pointer',
+
+            'dataLabels'    => array('enabled' => false),
+            'showInLegend'  => true
+        ));
+        $data = null;
+        foreach($med1 as $value)
+        {
+            $data[] = array(
+                '' .$value->getNom(), (int)$rep->countid($value->getId()),
+            );
+        }
+
+
+        $ob1->series(array(array('type' => 'pie', 'name' => 'chambre', 'data' => $data)));
+
+        return $this->render('chambre/index.html.twig', [
+            'controller_name' => 'ChambreController','piechart'=>$ob1
+        ]);
+    }
+
+
+
 
 }

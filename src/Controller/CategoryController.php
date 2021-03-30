@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
+use Ob\HighchartsBundle\Highcharts\Highchart;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,15 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CategoryController extends AbstractController
 {
-    /**
-     * @Route("/category", name="category")
-     */
-    public function index(): Response
-    {
-        return $this->render('category/index.html.twig', [
-            'controller_name' => 'CategoryController',
-        ]);
-    }
+
 
     /**
      * @Route("/remove/{id}", name="remove_category")
@@ -100,14 +93,14 @@ class CategoryController extends AbstractController
         foreach($categories as $categorie){
             $categNom[] = $categorie->getNom();
             $categColor[] = $categorie->getColors();
-           // $categCount[] = count($categorie->getAnnonces());
+            $categCount[] = count($categorie->getNom());
         }
 
         // On va chercher le nombre d'annonces publiées par date
 
 
-        $dates = [];
-        $annoncesCount = [];
+        //$dates = [];
+        //$annoncesCount = [];
 
         // On "démonte" les données pour les séparer tel qu'attendu par ChartJS
 
@@ -117,9 +110,13 @@ class CategoryController extends AbstractController
             'categNom' => json_encode($categNom),
             'categColor' => json_encode($categColor),
             'categCount' => json_encode($categCount),
-            'dates' => json_encode($dates),
-            'annoncesCount' => json_encode($annoncesCount),
+           //'dates' => json_encode($dates),
+            //'annoncesCount' => json_encode($annoncesCount),
         ]);
     }
+
+
+
+
 
 }
