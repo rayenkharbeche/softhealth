@@ -23,7 +23,7 @@ use Dompdf\Options;
 class UsersController extends AbstractController
 {
     /**
-
+     * @IsGranted("ROLE_ADMIN")
      * @Route("/", name="users_index", methods={"GET"})
      */
     public function index(UsersRepository $usersRepository): Response

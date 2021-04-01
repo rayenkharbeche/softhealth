@@ -31,26 +31,26 @@ class SecurityController extends AbstractController
         $user = $this->getUser();
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        if ($this->getUser()!=NULL && $user->getRoles()[0]=="Admin") {
+        if ($this->getUser()!=NULL && $user->getRoles()[0]=="ROLE_ADMIN") {
 
             return $this->render('/baseB.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
         }
-        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="Patient"){
+        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="ROLE_PATIENT"){
 
             return $this->render('/frontP.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
 
         }
-        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="Pharmacien"){
+        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="ROLE_PATIENT"){
 
             return $this->render('/frontPhar.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
 
         }
-        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="Medecin"){
+        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="ROLE_MEDECIN"){
 
             return $this->render('/frontMed.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
 
         }
-        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="Secretaire"){
+        else if ($this->getUser()!=NULL && $user->getRoles()[0]=="ROLE_SECRETAIRE"){
 
             return $this->render('/frontSec.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
 

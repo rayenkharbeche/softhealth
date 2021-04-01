@@ -69,5 +69,21 @@ class PlanningRepository extends ServiceEntityRepository
             ->execute()
             ;
     }
+    public function findPlanning($email): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Planning p
+           INNER JOIN App\Entity\Users u WITH p.personnel = u.id
+            WHERE u.email = :email'
+        )->setParameter( 'email', $email );
+
+//      returns an array of Produit objects
+        return $query->getResult();
+    }
+
+
 
 }

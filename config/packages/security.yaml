@@ -34,27 +34,23 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-    # - { path: ^/admin, roles: ROLE_ADMIN }
-    # - { path: ^/patient, roles: ROLE_USER }
-    # - { path: ^/sec, roles: ROLE_USER }
-    # - { path: ^/med, roles: ROLE_USER }
-    # - { path: ^/phar, roles: ROLE_USER }
-    # - { path: ^/patient, roles: ROLE_PATIENT }
-    # - { path: ^/sec, roles: ROLE_SERETAIRE }
-    # - { path: ^/med, roles: ROLE_MEDECIN }
-     #- { path: ^/phar, roles: ROLE_PHARMACIEN }
-     - { path: ^/planning, roles: [ ROLE_ADMIN, ROLE_SECRETAIRE , ROLE_MEDECIN, ROLE_PHARMACIEN ] }
-     - { path: ^/rendez/vous, roles: [ ROLE_ADMIN, ROLE_SECRETAIRE,  ROLE_MEDECIN , ROLE_PATIENT ] }
+     - { path: ^/admin, roles: ROLE_ADMIN }
+     - { path: ^/users, roles: ROLE_USER }
+     - { path: ^/patient, roles: ROLE_PATIENT }
+     - { path: ^/sec, roles: ROLE_SECRETAIRE }
+     - { path: ^/med, roles: ROLE_MEDECIN }
+     - { path: ^/phar, roles: ROLE_PHARMACIEN }
+     - { path: ^/planning, roles: ROLE_ADMIN }
+     - { path: ^/rendez/vous, roles: ROLE_ADMIN }
 
 
 
-   # role_hierarchy:
-        #ROLE_EDITOR: ROLE_USER
-       # ROLE_USER: ROLE_PATIENT
-       # ROLE_PATIENT: ROLE_PHARMACIEN
-       # ROLE_PHARMACIEN: ROLE_MEDECIN
-      #  ROLE_MEDECIN: ROLE_SERETAIRE
-      #  ROLE_SERETAIRE: ROLE_USER
-        #ROLE_ADMIN: ROLE_EDITOR
+    role_hierarchy:
+        ROLE_EDITOR: ROLE_USER
+        ROLE_ADMIN: [ ROLE_EDITOR, ROLE_PATIENT ]
+
+        ROLE_SECRETAIRE: ROLE_PATIENT
+
+
 
 

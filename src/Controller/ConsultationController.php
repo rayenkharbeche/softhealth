@@ -146,6 +146,13 @@ class ConsultationController extends AbstractController
      */
     public function show(Consultation $consultation): Response
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $value = $consultation->getViews() ;
+        $value = $value + 1;
+        $consultation->setViews($value);
+
+        $entityManager->flush();
+
         return $this->render('consultation/show.html.twig', [
             'consultation' => $consultation,
         ]);

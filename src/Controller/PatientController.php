@@ -18,7 +18,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 /**
-
  * @Route("/patient")
  */
 class PatientController extends AbstractController

@@ -3,7 +3,7 @@
          {% block css %}
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Login</title>
+            <title>secretaire</title>
             <meta name="description" content="">
              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
              <meta name="robots" content="all,follow">
@@ -120,7 +120,7 @@
                 <div class="title">
                     <h1 class="h4">Soft Health</h1>
                     <p> {{ app.user.email }}</p>
-                    <p> {{ app.user.roles }}</p>
+
                 </div>
             </div>
             <!-- Sidebar Navidation Menus-->
@@ -129,8 +129,8 @@
 
                 <li ><a href="{{ path('patient_index') }}"> <i class="icon-user"></i>Gestion patient</a></li>
                 <li ><a href="{{ path('consultation_index') }}"> <i class="icon-padnote"></i>Gestion consultations </a></li>
-                <li ><a href="#"> <i class="icon-calendar-l"></i>Gestion rendez vous </a></li>
-               <li ><a href="{{ path('planning_index') }}"> <i class="icon-show" ></i>Gestion planning </a></li>
+                <li ><a href="gestion_cr"> <i class="icon-calendar-l"></i>Gestion rendez vous </a></li>
+               <li ><a href="{{ path('gestion_cp') }}"> <i class="icon-show" ></i>Gestion planning </a></li>
                 <li ><a href="{{ path('category_show') }}"> <i class="fas fa-th-large"></i>Gestion Catégories </a></li>
                 <li ><a href="{{ path('chambre') }}"> <i class="fas fa-bed"></i>Gestion chambres </a></li>
                 <li ><a href="{{ path('dossier_show') }}"> <i class="icon-bars"></i>Gestion dossiers </a></li>

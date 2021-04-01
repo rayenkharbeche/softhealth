@@ -179,7 +179,7 @@
                                             </tbody>
                                         </table>
 
-                                    {% if is_granted('Admin') %}
+                                    {% if is_granted('ROLE_ADMIN') %}
                                         <a href="{{ path('users_new') }}">Create new</a>
                                     {% endif %}
                                         <div>

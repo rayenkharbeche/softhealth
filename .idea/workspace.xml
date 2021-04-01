@@ -75,7 +75,7 @@
       <change afterPath="$PROJECT_DIR$/templates/ordo/UpdateOrdo.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/ordo/index.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/ordonnance/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/patient/triePemail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/triePemail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +245,7 @@
       <workItem from="1617203090645" duration="1920000" />
       <workItem from="1617205204728" duration="27437000" />
       <workItem from="1617257371547" duration="8293000" />
-      <workItem from="1617277593888" duration="14389000" />
+      <workItem from="1617277593888" duration="23246000" />
     </task>
     <servers />
   </component>
@@ -253,6 +253,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="495" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617307787829">
+      <screen x="0" y="0" width="1458" height="864" />
+    </state>
+    <state x="495" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1458.864@0.0.1458.864" timestamp="1617307787829" />
     <state x="512" y="187" key="FileChooserDialogImpl" timestamp="1617277567554">
       <screen x="0" y="0" width="1458" height="864" />
     </state>

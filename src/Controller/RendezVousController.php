@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 /**
@@ -22,6 +23,7 @@ use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
 class RendezVousController extends AbstractController
 {
     /**
+     * @IsGranted("ROLE_ADMIN")
      * @Route("/", name="rendez_vous_index", methods={"GET"})
      */
     public function index(RendezVousRepository $rendezVousRepository): Response
@@ -31,7 +33,6 @@ class RendezVousController extends AbstractController
         ]);
     }
     /**
-     * pour le recherche avancer!!
      * @Route ("/searchRDV", name="searchRDV",methods={"GET"})
      */
     public function searchRDV(Request $request,NormalizableInterface $Normalizable){
@@ -67,6 +68,7 @@ class RendezVousController extends AbstractController
     }
 
     /**
+     * @IsGranted("Admin")
      * @Route("/c", name="rendez_vous_c", methods={"GET"})
      */
     public function indexC(RendezVousRepository $calendar): Response
@@ -134,6 +136,7 @@ class RendezVousController extends AbstractController
 
 
     /**
+     * @IsGranted("Admin")
      * @Route("/trie", name="rendez_vous_Tree")
      */
     public function Tree(Request $request): Response
