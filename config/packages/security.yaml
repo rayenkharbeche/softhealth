@@ -1,0 +1,60 @@
+security:
+    encoders:
+        App\Entity\Users:
+            algorithm: auto
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\Users
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Security\UsersAuthenticator
+            logout:
+                path: app_logout
+                # where to redirect after logout
+                # target: app_any_route
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+    # - { path: ^/admin, roles: ROLE_ADMIN }
+    # - { path: ^/patient, roles: ROLE_USER }
+    # - { path: ^/sec, roles: ROLE_USER }
+    # - { path: ^/med, roles: ROLE_USER }
+    # - { path: ^/phar, roles: ROLE_USER }
+    # - { path: ^/patient, roles: ROLE_PATIENT }
+    # - { path: ^/sec, roles: ROLE_SERETAIRE }
+    # - { path: ^/med, roles: ROLE_MEDECIN }
+     #- { path: ^/phar, roles: ROLE_PHARMACIEN }
+     - { path: ^/planning, roles: [ ROLE_ADMIN, ROLE_SECRETAIRE , ROLE_MEDECIN, ROLE_PHARMACIEN ] }
+     - { path: ^/rendez/vous, roles: [ ROLE_ADMIN, ROLE_SECRETAIRE,  ROLE_MEDECIN , ROLE_PATIENT ] }
+
+
+
+   # role_hierarchy:
+        #ROLE_EDITOR: ROLE_USER
+       # ROLE_USER: ROLE_PATIENT
+       # ROLE_PATIENT: ROLE_PHARMACIEN
+       # ROLE_PHARMACIEN: ROLE_MEDECIN
+      #  ROLE_MEDECIN: ROLE_SERETAIRE
+      #  ROLE_SERETAIRE: ROLE_USER
+        #ROLE_ADMIN: ROLE_EDITOR
+
+

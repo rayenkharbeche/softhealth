@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+admin:
+  path: /wp-admin
+  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+  defaults:
+    route: sonata_admin_dashboard
+    # make a permanent redirection...
+    permanent: true
+    # ...and keep the original query string parameters
+    keepQueryParams: true

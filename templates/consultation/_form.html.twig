@@ -1,0 +1,46 @@
+
+{% block body %}
+    <body>
+
+    <div class="container">
+        <div class="form">
+
+            {{ form_start(form,{
+                'attr': {
+                    'novalidate': 'novalidate',
+
+                }
+            }
+            ) }}
+
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Numéro</label>
+                {{ form_widget(form.numC) }}
+                {{ form_errors(form.numC) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Date de la consultation</label>
+                {{ form_widget(form.dateC) }}
+                {{ form_errors(form.dateC) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Conseils</label>
+                {{ form_widget(form.text) }}
+                {{ form_errors(form.text) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Notre patient</label>
+                {{ form_widget(form.patient) }}
+                {{ form_errors(form.patient) }}
+            </div>
+
+
+
+                <button class="btn btn-lg btn-primary">{{ button_label|default('Ajouter') }}</button>
+
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+    </body>
+{% endblock %}

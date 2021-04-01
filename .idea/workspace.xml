@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d74adca-27db-4d16-9dbb-c8f0823df680" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ChambreController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/DossierController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FichierController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/MediController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/OrdoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Chambre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Dossier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Fichier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Medicament.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ordonnance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ChambreType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/DossierType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FichierType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/MedicamentType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/OrdonnanceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercheChambreType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercheMedType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercheType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercheeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/TextType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ChambreRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DossierRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FichierRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/MedicamentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/OrdonnanceRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/Front.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/base2.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/baseB.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Front/header.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/basee.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/baseee.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/Updatecategory.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/createcategory.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/formCategory.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/homecategory.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/showcategory.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/statistic.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/Updatechambre.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/listChambreOrderBy.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chambre/showchambre.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dossier/ShowDoc.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dossier/UpdateDoc.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dossier/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dossier/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fichier/ShowFich.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fichier/UpdateFich.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fichier/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fichier/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/AddMedicament.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/List.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/ShowMedic.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/UpdateMedic.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medi/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/AddOrdonnance.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/ListOrdonOrderBy.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/Pdf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/ShowOrdo.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/UpdateOrdo.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordo/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordonnance/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/triePemail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/triePemail.html.twig" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1q1rvBbgmhMlqD7yuQJmKBNxF7f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../piIntegRRA" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\piInteg1\templates" />
+      <recent name="C:\wamp64\www\piInteg1\src\Repository" />
+      <recent name="C:\wamp64\www\piInteg1\src\Form" />
+      <recent name="C:\wamp64\www\piInteg1\src\Entity" />
+      <recent name="C:\wamp64\www\piInteg1\src\Controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\piInteg1\public\back\back1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d74adca-27db-4d16-9dbb-c8f0823df680" name="Default Changelist" comment="" />
+      <created>1616258168900</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616258168900</updated>
+      <workItem from="1616258170015" duration="153000" />
+      <workItem from="1616529875859" duration="530000" />
+      <workItem from="1616530844347" duration="214000" />
+      <workItem from="1616762264877" duration="308000" />
+      <workItem from="1616764373313" duration="344000" />
+      <workItem from="1616963757545" duration="2981000" />
+      <workItem from="1617044947642" duration="3047000" />
+      <workItem from="1617048230268" duration="569000" />
+      <workItem from="1617085364152" duration="672000" />
+      <workItem from="1617092841186" duration="1756000" />
+      <workItem from="1617203090645" duration="1920000" />
+      <workItem from="1617205204728" duration="27437000" />
+      <workItem from="1617257371547" duration="8293000" />
+      <workItem from="1617277593888" duration="14389000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="512" y="187" key="FileChooserDialogImpl" timestamp="1617277567554">
+      <screen x="0" y="0" width="1458" height="864" />
+    </state>
+    <state x="512" y="187" key="FileChooserDialogImpl/0.0.1458.864@0.0.1458.864" timestamp="1617277567554" />
+    <state x="518" y="187" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1616764536092" />
+  </component>
+</project>

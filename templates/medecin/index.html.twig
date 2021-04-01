@@ -1,0 +1,35 @@
+{% extends 'baseB.html.twig' %}
+
+{% block title %}Medecin index{% endblock %}
+
+{% block body %}
+    <h1>Medecin index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NomMedecin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for medecin in medecins %}
+            <tr>
+                <td>{{ medecin.id }}</td>
+                <td>{{ medecin.nomMedecin }}</td>
+                <td>
+                    <a href="{{ path('medecin_show', {'id': medecin.id}) }}">show</a>
+                    <a href="{{ path('medecin_edit', {'id': medecin.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('medecin_new') }}">Create new</a>
+{% endblock %}

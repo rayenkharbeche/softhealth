@@ -1,0 +1,16 @@
+{% extends 'baseC.html.twig' %}
+{% block title %}Rendez Vous{% endblock %}
+{% block header %}
+
+
+
+    <div class="cd-schedule__events">
+        <ul>
+            <li class="cd-schedule__event">
+                events: {{ data|raw }},
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
+

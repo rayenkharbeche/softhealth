@@ -1,0 +1,74 @@
+{% extends 'baseB.html.twig' %}
+
+{% block body %}
+    <body>
+
+{% for message in app.flashes('message') %}
+    <div class="alert alert-success" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+{% for message in app.flashes('warning') %}
+    <div class="alert alert-warning" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+{% for message in app.flashes('danger') %}
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+
+    <div class="page login-page">
+        <div class="container d-flex align-items-center">
+            <div class="form-holder has-shadow">
+                <div class="row">
+                    <!-- Logo & Information Panel-->
+                    <div class="col-lg-6">
+                        <div class="info d-flex align-items-center">
+                            <div class="content">
+                                <div class="logo">
+                                    <h1>Connexion Log in</h1>
+                                </div>
+                                <p>Equipe SOFT HEALTH</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Panel    -->
+                    <div class="col-lg-6 bg-white">
+                        <div class="form d-flex align-items-center">
+                            <div class="content">
+                                <form method="post" class="form-validate">
+                                    <div class="form-group">
+                                        <label for="login-username">Email</label>
+                                        <input type="email" value="{{ last_username }}" name="email"  id="login-username" class="form-control" required autofocus>
+
+                                        <label for="inputPassword">Password</label>
+                                        <input type="password" name="password" id="inputPassword" class="form-control" required>
+                                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                                        <div>
+                                            <button class="btn btn-lg btn-primary" type="submit">
+                                                Sign in
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </form> <a href="{{ path('app_forgotten_password') }}" class="forgot-pass">mot de passe oublié?</a><br><small>Do not have an account? </small><a href="{{ path('app_register') }}" class="signup">Signup</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </body>
+{% endblock %}
+
+

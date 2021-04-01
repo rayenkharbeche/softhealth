@@ -1,0 +1,343 @@
+{% extends 'baseB.html.twig' %}
+
+{% block title %}Hello SecController!{% endblock %}
+
+{% block body %}
+<body>
+<html>
+   <head>
+         {% block css %}
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Login</title>
+            <meta name="description" content="">
+             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+             <meta name="robots" content="all,follow">
+               <!-- Bootstrap CSS-->
+            <link rel="stylesheet" href="{{ asset('back/vendor/bootstrap/css/bootstrap.min.css') }}">
+              <!-- Font Awesome CSS-->
+            <link rel="stylesheet" href="{{ asset('back/vendor/font-awesome/css/font-awesome.min.css') }}">
+             <!-- Fontastic Custom icon font-->
+            <link rel="stylesheet" href="{{ asset('back/css/fontastic.css') }}">
+               <!-- Google fonts - Poppins -->
+             <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:300,400,700') }}">
+              <!-- theme stylesheet-->
+             <link rel="stylesheet" href="{{ asset('back/css/style.default.css ') }}" id="theme-stylesheet">
+             <!-- Custom stylesheet - for your changes-->
+            <link rel="stylesheet" href="{{ asset('back/css/custom.css') }}">
+             <!-- Favicon-->
+            <link rel="shortcut icon" href="{{ asset('back/img/favicon.ico') }}">
+         {% endblock %}
+  {% block js %}
+
+      <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="{{ asset('https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') }}"></script><![endif]-->
+
+      <script src="{{asset ('back/vendor/jquery/jquery.min.js') }}"></script>
+      <script src="{{ asset('back/vendor/popper.js/umd/popper.min.js')}}"> </script>
+      <script src="{{ asset('back/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('back/vendor/jquery.cookie/jquery.cookie.js') }}"> </script>
+      <script src="{{ asset('back/vendor/chart.js/Chart.min.js') }}"></script>
+      <script src="{{ asset('back/vendor/jquery-validation/jquery.validate.min.js') }}"></script>
+
+      <script src="{{ asset('back/js/front.js') }}"></script>
+      <script src="{{ asset('vendor/popper.js/umd/popper.min.js') }}"> </script>
+      <script src="{{ asset('js/front.js') }}"></script>
+  {% endblock %}
+
+
+
+   </head>
+
+
+
+
+
+<div class="page">
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="search-box">
+                <button class="dismiss"><i class="icon-close"></i></button>
+                <form id="searchForm" action="#" role="search">
+                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                </form>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                            <div class="brand-text d-none d-lg-inline-block"><span>Soft </span><strong>HEALTH</strong></div>
+                            <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Search-->
+                        <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+
+
+                        <!-- Messages                        -->
+                        <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange badge-corner">10</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                        <div class="msg-body">
+                                            <h3 class="h5">Rayen</h3><span>Sent You Message</span>
+                                        </div></a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                        <div class="msg-body">
+                                            <h3 class="h5">Rihem</h3><span>Sent You Message</span>
+                                        </div></a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                        <div class="msg-body">
+                                            <h3 class="h5">Emna</h3><span>Sent You Message</span>
+                                        </div></a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages   </strong></a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- Logout    -->
+                        <li class="nav-item"><a href=" {{ path('app_logout') }}" class="nav-link logout"> <span class="d-none d-sm-inline">Deconnexion</span><i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+
+                <div class="title">
+                    <h1 class="h4">Soft Health</h1>
+                    <p>Secétaire</p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus-->
+            <ul class="list-unstyled">
+                <li class="active"><a href="{{ path('sec') }}"> <i class="icon-home"></i>Home </a></li>
+
+                <li ><a href="{{ path('patient_index') }}"> <i class="icon-user"></i>Gestion patient</a></li>
+                <li ><a href="{{ path('consultation_index') }}"> <i class="icon-padnote"></i>Gestion consultations </a></li>
+
+
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-mail"></i>Gestion réclamations </a>
+                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                        <li><a href="{{ path('listReclamation') }}">Détails réclamation</a></li>
+                        <li><a href="{{path('addReclamation') }}">Ajouter réclamation</a></li>
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <!-- Page Header-->
+            <header class="page-header">
+                <div class="container-fluid">
+                    <h2 class="no-margin-bottom">Home</h2>
+                </div>
+            </header>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-holder container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Secrétaire</li>
+                </ul>
+            </div>
+            <section class="dashboard-counts no-padding-bottom">
+                <div class="container-fluid">
+                    <div class="row bg-white has-shadow">
+                        <!-- Item -->
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="item d-flex align-items-center">
+                                <div class="icon bg-violet"><i class="icon-user"></i></div>
+                                <div class="title"><span>Nouveau<br>Patient</span>
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
+                                    </div>
+                                </div>
+                                <div class="number"><strong>25</strong></div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="item d-flex align-items-center">
+                                <div class="icon bg-red"><i class="icon-padnote"></i></div>
+                                <div class="title"><span>Consultation</span>
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+                                    </div>
+                                </div>
+                                <div class="number"><strong>70</strong></div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="item d-flex align-items-center">
+                                <div class="icon bg-green"><i class="icon-bill"></i></div>
+                                <div class="title"><span>Catégories et chambres<br> </span>
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
+                                    </div>
+                                </div>
+                                <div class="number"><strong>40</strong></div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="item d-flex align-items-center">
+                                <div class="icon bg-orange"><i class="icon-check"></i></div>
+                                <div class="title"><span>Open<br>Planning</span>
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
+                                    </div>
+                                </div>
+                                <div class="number"><strong>50</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Statistics -->
+                        <div class="statistics col-lg-3 col-12">
+                            <div class="statistic d-flex align-items-center bg-white has-shadow">
+                                <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
+                                <div class="text"><strong>234</strong><br><small>Applications</small></div>
+                            </div>
+                            <div class="statistic d-flex align-items-center bg-white has-shadow">
+                                <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
+                                <div class="text"><strong>152</strong><br><small>Interviews</small></div>
+                            </div>
+                            <div class="statistic d-flex align-items-center bg-white has-shadow">
+                                <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
+                                <div class="text"><strong>147</strong><br><small>Forwards</small></div>
+                            </div>
+                        </div>
+                        <!-- Line Chart            -->
+                        <div class="chart col-lg-6 col-12">
+                            <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+                                <canvas id="lineCahrt"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart col-lg-3 col-12">
+                            <!-- Bar Chart   -->
+                            <div class="bar-chart has-shadow bg-white">
+                                <div class="title"><strong class="text-violet">95%</strong><br><small>Current Server Uptime</small></div>
+                                <canvas id="barChartHome"></canvas>
+                            </div>
+                            <!-- Numbers-->
+                            <div class="statistic d-flex align-items-center bg-white has-shadow">
+                                <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
+                                <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Client Section-->
+            <section class="client no-padding-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Work Amount  -->
+                        <div class="col-lg-4">
+                            <div class="work-amount card">
+                                <div class="card-close">
+                                    <div class="dropdown">
+                                        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                                        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Work Hours</h3><small>Disponible 24/7</small>
+                                    <div class="chart text-center">
+                                        <div class="text"><strong>90</strong><br><span>Hours</span></div>
+                                        <canvas id="pieChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Client Profile -->
+                        <div class="col-lg-4">
+                            <div class="client card">
+                                <div class="card-close">
+                                    <div class="dropdown">
+                                        <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                                        <div aria-labelledby="closeCard2" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="client-avatar"><img src="{{ asset('img/avatar-2.jpg') }}" alt="..." class="img-fluid rounded-circle">
+                                        <div class="status bg-green"></div>
+                                    </div>
+                                    <div class="client-title">
+                                        <h3>Jason Doe</h3><span>Doctor</span><a href="#">Follow</a>
+                                    </div>
+                                    <div class="client-info">
+                                        <div class="row">
+                                            <div class="col-4"><strong>20</strong><br><small>Photos</small></div>
+                                            <div class="col-4"><strong>54</strong><br><small>Videos</small></div>
+                                            <div class="col-4"><strong>235</strong><br><small>Tasks</small></div>
+                                        </div>
+                                    </div>
+                                    <div class="client-social d-flex justify-content-between"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a><a href="#" target="_blank"><i class="fa fa-twitter"></i></a><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a><a href="#" target="_blank"><i class="fa fa-instagram"></i></a><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Overdue             -->
+                        <div class="col-lg-4">
+                            <div class="overdue card">
+                                <div class="card-close">
+                                    <div class="dropdown">
+                                        <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Total Overdue</h3>
+                                    <div class="number text-center">$20,000</div>
+                                    <div class="chart">
+                                        <canvas id="lineChart1">                               </canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Page Footer-->
+            <footer class="main-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Soft Health </p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <p>Design by <a href="https://bootstrapious.com/p/admin-template" class="external">Spark Team</a></p>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+
+
+   </html>
+</body>
+{% endblock %}

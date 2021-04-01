@@ -1,0 +1,70 @@
+{% block body %}
+
+
+    {% block titre %}
+
+        <section id="appointment" class="appointment section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="titreviolet">
+                    <h2>Planning</h2>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+    <body>
+    <div class="container">
+        <div class="form">
+
+            {{ form_start(form,{
+                'attr': {
+                    'novalidate': 'novalidate',
+
+                }
+            }
+            ) }}
+
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Nom Planning</label>
+                {{ form_widget(form.nomP) }}
+                {{ form_errors(form.nomP) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Date debut</label>
+                {{ form_widget(form.dateDebut) }}
+                {{ form_errors(form.dateDebut) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Date Fin</label>
+                {{ form_widget(form.dateFin) }}
+                {{ form_errors(form.dateFin) }}
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Description Planning</label>
+                {{ form_widget(form.descriptionP) }}
+                {{ form_errors(form.descriptionP) }}
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 form-control-label">Personnel lier</label>
+                {{ form_widget(form.personnel) }}
+                {{ form_errors(form.personnel) }}
+            </div>
+
+
+
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary">>{{ button_label|default('Save') }}</button>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+    </body>
+{% endblock %}
+{% block javascipts %}
+    <script>
+        jQuery(document).ready(function (){
+           $('.js-datepicker').datepicker();
+        });
+    </script>
+{% endblock %}
