@@ -1,5 +1,5 @@
 {% extends 'baseB.html.twig' %}
-{% block title %}Contact{% endblock %}
+{% block title %} Contact{% endblock %}
 
 {% block body %}
     <body>
@@ -73,19 +73,12 @@
                 </div>
                 <!-- Sidebar Navidation Menus-->
                 <ul class="list-unstyled">
-                    <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                    <li ><a href="{{ path('patient_index') }}"> <i class="icon-grid"></i>Patient </a></li>
-                    <li><a href="#"> <i class="fa fa-bar-chart"></i>Contact </a></li>
-                    <li class="active"><a href="{{ path('consultation_index') }}"> <i class="icon-padnote"></i>Consultation </a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
-                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Medecin</a></li>
-                            <li><a href="#">Infermiere</a></li>
-                            <li><a href="#">Pharmacien</a></li>
-                            <li><a href="#">Secraitère</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+                    <li ><a href="{{ path('patientacceuil') }}"><i class="icon-home"></i>Home </a></li>
+                    <li><a href="{{ path('patient_index') }}"> <i class="icon-user"></i>Gestion Patient </a></li>
+                    <li ><a href="{{ path('consultation_index') }}"> <i class="icon-padnote"></i>Gestion Consultation </a></li>
+                    <li class="active"><a href="{{ path('contact') }}"> <i class="icon-mail"></i>Contact</a></li>
+
+
                 </ul>
 
             </nav>
@@ -113,12 +106,16 @@
 
                         </div>
 
-                        <a href="{{ path('main') }}">back to home</a>
+                        <button class="btn btn-lg btn-secondary"> <a href="{{ path('main') }}">back to home</a></button>
                     </div>
                 </div>
 
             </div>
         </div>
+    </div>
+    <div class="col-sm-6 text-right">
+        <p>Design by <a href="https://bootstrapious.com/p/admin-template" class="external">SparkTeam</a></p>
+
     </div>
     </body>
 

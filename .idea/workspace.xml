@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f53b3f0-3a77-4eda-bc10-317e11300080" name="Default Changelist" comment="" />
+    <list default="true" id="9f53b3f0-3a77-4eda-bc10-317e11300080" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210312130807.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210312131042.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331141700.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210401155718.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/back/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/assets/img/logoM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ContactClienController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/MapController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PatientacceuilController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ConsultationNumType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercheTypeCINType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RechercherEmailType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/consultation/mypdf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/consultation/trieCDate.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/consultation/trieCnum.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact_clien/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact_clien/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/map/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient/patient_pdf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient/rechercheOrderBy.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient/triePCIN.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient/triePemail.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patientacceuil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mydir.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mydir.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210311022705.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210331211250.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/back/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/back/css/style.blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/back/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/back/css/style.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ConsultationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConsultationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Consultation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Consultation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Patient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchPatientType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RechercheDateType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ConsultationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ConsultationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PatientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatientRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baseB.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseB.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/recherche.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/consultation/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consultation/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/show.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +70,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,26 +177,39 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/fig/link-util" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pak2DSfCeRMr61JK7Lv8YEytiG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\mydir\public\back\js" />
+      <recent name="C:\wamp64\www\mydir\templates\contactfront" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\mydir\templates" />
-      <recent name="C:\wamp64\www\mydir" />
-      <recent name="C:\wamp64\www\mydir\src" />
-      <recent name="C:\wamp64\www\mydir\public" />
+      <recent name="C:\wamp64\www\mydir\templates\patient" />
+      <recent name="C:\wamp64\www\mydir\src\Controller" />
+      <recent name="C:\wamp64\www\mydir\public\front\assets\img" />
+      <recent name="C:\wamp64\www\mydir\templates\contact_clien" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -150,32 +226,92 @@
       <workItem from="1615464233505" duration="301000" />
       <workItem from="1615469352192" duration="8762000" />
       <workItem from="1615483597872" duration="12524000" />
-      <workItem from="1615496712448" duration="6581000" />
+      <workItem from="1615496712448" duration="11829000" />
+      <workItem from="1615513052749" duration="199000" />
+      <workItem from="1615514506554" duration="371000" />
+      <workItem from="1615514928969" duration="21000" />
+      <workItem from="1615514977474" duration="61000" />
+      <workItem from="1615515458434" duration="2041000" />
+      <workItem from="1615537521623" duration="4793000" />
+      <workItem from="1615546324749" duration="8427000" />
+      <workItem from="1615997252490" duration="8858000" />
+      <workItem from="1616008743817" duration="2018000" />
+      <workItem from="1616091064205" duration="2777000" />
+      <workItem from="1616094420916" duration="18870000" />
+      <workItem from="1616164169742" duration="12702000" />
+      <workItem from="1616239059776" duration="4983000" />
+      <workItem from="1616245483502" duration="20269000" />
+      <workItem from="1616269022361" duration="7629000" />
+      <workItem from="1616348583411" duration="20525000" />
+      <workItem from="1616408644635" duration="22818000" />
+      <workItem from="1616449858038" duration="4845000" />
+      <workItem from="1616532884270" duration="2200000" />
+      <workItem from="1616597030575" duration="815000" />
+      <workItem from="1616601843030" duration="344000" />
+      <workItem from="1617029796350" duration="4332000" />
+      <workItem from="1617045332550" duration="5975000" />
+      <workItem from="1617100096226" duration="1334000" />
+      <workItem from="1617197969914" duration="5756000" />
+      <workItem from="1617204268966" duration="779000" />
+      <workItem from="1617223758172" duration="8208000" />
+      <workItem from="1617235487641" duration="3005000" />
+      <workItem from="1617290554787" duration="5019000" />
+      <workItem from="1617298520901" duration="2773000" />
+      <workItem from="1617307409645" duration="5774000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615493006451">
+    <state x="309" y="42" key="#Inspections" timestamp="1616247375416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615493006451" />
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1616247375416" />
+    <state x="420" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615510528272">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="420" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1615510528272" />
+    <state x="340" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616363624325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="340" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1616363624325" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615511899624">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615511899624" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617232280759">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1617232280759" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1615539617811">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1615539617811" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617227393090">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617227393090" />
+    <state x="492" y="87" key="NewPhpClassDialog" timestamp="1616411109363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1616411109363" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1615490153689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1615490153689" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/templates/footer.html.twig</url>
-          <line>58</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617233288302">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617233288302" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1616369441171">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1616369441171" />
   </component>
 </project>

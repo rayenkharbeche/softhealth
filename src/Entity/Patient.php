@@ -40,23 +40,27 @@ class Patient
     private $email;
 
     /**
+     * @var string The hashed password
      * @ORM\Column(type="string", length=255)
      */
     private $password;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Consultation::class, cascade={"persist", "remove"})
-     */
-    private $consultation;
+
 
     /**
-     * @ORM\OneToMany(targetEntity=RendezVous::class, mappedBy="patient")
+     * @ORM\OneToMany(targetEntity=RendezVous::class, mappedBy="patient", cascade={"persist"})
      */
     private $rendezVouses;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Consultation::class, mappedBy="patient")
+     */
+    private $consultation;
 
     public function __construct()
     {
         $this->rendezVouses = new ArrayCollection();
+        $this->consultation = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -124,17 +128,7 @@ class Patient
         return $this;
     }
 
-    public function getConsultation(): ?Consultation
-    {
-        return $this->consultation;
-    }
 
-    public function setConsultation(?Consultation $consultation): self
-    {
-        $this->consultation = $consultation;
-
-        return $this;
-    }
 
     /**
      * @return Collection|RendezVous[]
@@ -170,5 +164,38 @@ class Patient
     {
         return (string)$this->getId();
 
+
+    }
+
+
+
+    /**
+     * @return Collection|Consultation[]
+     */
+    public function getConsultation(): Collection
+    {
+        return $this->consultation;
+    }
+
+    public function addConsultation(Consultation $consultation): self
+    {
+        if (!$this->consultation->contains($consultation)) {
+            $this->consultation[] = $consultation;
+            $consultation->setPatient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConsultation(Consultation $consultation): self
+    {
+        if ($this->consultation->removeElement($consultation)) {
+            // set the owning side to null (unless already changed)
+            if ($consultation->getPatient() === $this) {
+                $consultation->setPatient(null);
+            }
+        }
+
+        return $this;
     }
 }

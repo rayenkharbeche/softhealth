@@ -2,15 +2,6 @@
 {% block body %}
     <body>
 
-    {% block titre %}
-        <section id="appointment" class="appointment section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="titreviolet">
-                    <h2>Nouveau patient</h2>
-                </div>
-            </div>
-        </section>
-    {% endblock %}
     <div class="container">
         <div class="form">
 
@@ -50,7 +41,11 @@
                     {{ form_widget(form.password) }}
                     {{ form_errors(form.password) }}
                 </div>
-
+                <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Consultation</label>
+                    {{ form_widget(form.consultation) }}
+                    {{ form_errors(form.consultation) }}
+                </div>
 
 
                 <div class="form-group">

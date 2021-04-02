@@ -1867,6 +1867,7 @@ input.input-material.is-invalid ~ label {
 .form-group-material {
   position: relative;
   margin-bottom: 30px;
+
 }
 
 .modal-content {

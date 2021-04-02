@@ -1,0 +1,33 @@
+  <table class="table table-striped table-hover">
+        <thead>
+<tr>
+    <th>Id</th>
+    <th>NumC</th>
+    <th>DateC</th>
+    <th>Text</th>
+
+</tr>
+
+        </thead>
+
+
+ <tbody>
+<h4>pdf </h4>
+<p>Consultation a imprimer </p>
+{% for consultation in consultations %}
+    <tr>
+        <td>{{ consultation.id }}</td>
+        <td>{{ consultation.numC }}</td>
+        <td>{{ consultation.dateC  }}</td>
+        <td>{{ consultation.text }}</td>
+
+    </tr>
+
+
+{% endfor %}
+</tbody>
+
+
+
+</table>
+

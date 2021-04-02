@@ -22,12 +22,12 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto " href="{{ path('map') }}">Nos localisations </a></li>
                 <li><a class="nav-link scrollto" href="#about">About</a></li>
-                <li class="dropdown"><a href="#"><span>Sérevice patient</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>Sérevice visiteur</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Réserver un rendez vous</a></li>
                         <li><a href="#">Réclamation</a></li>
-                        <li><a href="{{ path('contact') }}">Envoyer un mail </a></li>
+                        <li><a href="{{ path('contact_clien') }}">Envoyer un mail </a></li>
 
 
                     </ul>
@@ -37,6 +37,7 @@
                         <li><a href="">Espace Pharmacien</a></li>
                         <li><a href="#">Espace secrétaire</a></li>
                         <li><a href="#">Espace Infermière</a></li>
+                        <li><a href="{{ path('patientacceuil') }}">Espace Patient</a></li>
 
                     </ul>
                 </li>
@@ -45,7 +46,7 @@
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
-        <a href="#" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Login</a>
+        <a href="{{ path('patientacceuil') }}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Login</a>
 
     </div>
 

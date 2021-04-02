@@ -33,9 +33,14 @@ class Consultation
      */
     private $text;
     /**
-     * @ORM\OneToOne(targetEntity=Patient::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Patient::class, cascade={"persist"})
      */
     private $patient;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $views;
 
     public function getId(): ?int
     {
@@ -95,9 +100,22 @@ class Consultation
     }
     public function __toString()
     {
-        return (string)$this->getId();
+        return (string)$this->getPatient();
 
     }
+
+    public function getViews(): ?int
+    {
+        return $this->views;
+    }
+
+    public function setViews(?int $views): self
+    {
+        $this->views = $views;
+
+        return $this;
+    }
+
 
 
 }

@@ -18,6 +18,41 @@ class PatientRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Patient::class);
     }
+ /**
+  * Requete QueryBuilder
+  */
+   public function trieCIN(){
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.cin','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function RechercheC($patientC)
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.patientC LIKE :patientC')
+            ->setParameter('patientC',"%".patientC."%" )
+            ->getQuery()->execute();
+    }
+
+    public function trieEmail(){
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.email','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function RechercheE($patientM)
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.patientM LIKE :patientM')
+            ->setParameter('patientM',"%".patientM."%" )
+            ->getQuery()->execute();
+    }
+
 
     // /**
     //  * @return Patient[] Returns an array of Patient objects
@@ -45,6 +80,5 @@ class PatientRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult()
         ;
-    }
-    */
+    } */
 }

@@ -19,6 +19,40 @@ class ConsultationRepository extends ServiceEntityRepository
         parent::__construct($registry, Consultation::class);
     }
 
+    /**
+     * Requete QueryBuilder
+     */
+    public function trieDate(){
+        return $this->createQueryBuilder('c')
+            ->orderBy('c.dateC','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function RechercheC($consultationD)
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.consultationD LIKE :consultationD' )
+            ->setParameter('consultationD',"%".consultationD."%" )
+            ->getQuery()->execute();
+    }
+
+    public function trieNum(){
+        return $this->createQueryBuilder('c')
+            ->orderBy('c.numC','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function RechercheN($consultationN)
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.consultationN LIKE :consultationN' )
+            ->setParameter('consultationN',"%".consultationN."%" )
+            ->getQuery()->execute();
+    }
     // /**
     //  * @return Consultation[] Returns an array of Consultation objects
     //  */
